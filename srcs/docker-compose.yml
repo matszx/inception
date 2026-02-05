@@ -3,8 +3,12 @@ services:
   build: requirements/nginx/.
   container_name: nginx
   ports:
-  - "80:80"
+   - "80:80"
+  volumes:
+   - .web:/var/www/html
  wordpress:
   build: requirements/wordpress/.
   container_name: wordpress
+  volumes:
+   - .web:/var/www/html
 
