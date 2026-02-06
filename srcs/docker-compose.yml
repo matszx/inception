@@ -4,7 +4,7 @@ services:
   container_name: nginx
   restart: on-failure
   volumes:
-   - .web:/var/www/html
+   - web:/var/www/html
   depends_on:
    - wordpress
   networks:
@@ -16,7 +16,7 @@ services:
   container_name: wordpress
   restart: on-failure
   volumes:
-   - .web:/var/www/html
+   - web:/var/www/html
   depends_on:
    - mariadb
   networks:
@@ -28,11 +28,24 @@ services:
   container_name: mariadb
   restart: on-failure
   volumes:
-   - .db:/var/www/html
+   - db:/var/www/html
   networks:
    - inception
   expose:
    - "3306"
+volumes:
+  web:
+   driver: local
+   driver_opts:
+    type: none
+    o: bind
+    device: /home/mats/data/web
+  db:
+   driver: local
+   driver_opts:
+    type: none
+    o: bind
+    device: /home/mats/data/db
 networks:
  inception:
   driver: bridge
