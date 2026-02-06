@@ -39,13 +39,13 @@ volumes:
    driver_opts:
     type: none
     o: bind
-    device: /home/mats/data/web
+    device: /home/mcygan/data/web
   db:
    driver: local
    driver_opts:
     type: none
     o: bind
-    device: /home/mats/data/db
+    device: /home/mcygan/data/db
 networks:
  inception:
   driver: bridge
