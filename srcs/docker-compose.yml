@@ -30,7 +30,7 @@ services:
   container_name: mariadb
   restart: on-failure
   volumes:
-   - db:/var/www/html
+   - db:/var/lib/mysql
   networks:
    - inception
   expose:
