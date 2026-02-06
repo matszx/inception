@@ -1,7 +1,7 @@
 #!/bin/bash
 
-chmod -R 755 /home/mcygan/data/db
-chown -R 999:999 /home/mcygan/data/db
+#chmod -R 755 /home/mcygan/data/db
+#chown -R 999:999 /home/mcygan/data/db
 
 mysql_install_db
 mysqld_safe &
