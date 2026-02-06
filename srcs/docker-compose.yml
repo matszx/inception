@@ -27,6 +27,8 @@ services:
   build: requirements/mariadb/.
   container_name: mariadb
   restart: on-failure
+  volumes:
+   - .db:/var/www/html
   networks:
    - inception
   expose:
