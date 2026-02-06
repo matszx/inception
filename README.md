@@ -18,6 +18,13 @@ Commands:
 - make status ➡ show running containers
 
 ## Resources
+### Links to get started
+https://docs.docker.com/get-started/  
+https://docs.docker.com/compose/  
+https://docs.docker.com/reference/dockerfile/  
+https://www.howtogeek.com/733522/docker-for-beginners-everything-you-need-to-know/  
+### AI use
+AI was used for assist with the initial VM setup, final review of some files and to occasionally track down some subtle hard-to-spot issues
 
 ## VM vs Docker
 | Virtual machine | Docker |
