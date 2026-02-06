@@ -19,10 +19,10 @@ Commands:
 
 ## Resources
 ### Links to get started
-https://docs.docker.com/get-started/  
-https://docs.docker.com/compose/  
-https://docs.docker.com/reference/dockerfile/  
+https://docs.docker.com/get-started/   
 https://www.howtogeek.com/733522/docker-for-beginners-everything-you-need-to-know/  
+https://medium.com/@ssterdev/inception-guide-42-project-part-i-7e3af15eb671  
+https://medium.com/@ssterdev/inception-42-project-part-ii-19a06962cf3b  
 ### AI use
 AI was used for assist with the initial VM setup, final review of some files and to occasionally track down some subtle hard-to-spot issues
 
