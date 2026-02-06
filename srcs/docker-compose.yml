@@ -1,56 +1,57 @@
 services:
- nginx:
-  build: requirements/nginx/.
-  container_name: nginx
-  restart: on-failure
-  volumes:
-   - web:/var/www/html
-  depends_on:
-   - wordpress
-  networks:
-   - inception
-  ports:
-   - "443:443"
- wordpress:
-  build: requirements/wordpress/.
-  container_name: wordpress
-  restart: on-failure
-  volumes:
-   - web:/var/www/html
-  depends_on:
-   - mariadb
-  networks:
-   - inception
-  expose:
-   - "9000"
-  env_file:
-   - .env
- mariadb:
-  build: requirements/mariadb/.
-  container_name: mariadb
-  restart: on-failure
-  volumes:
-   - db:/var/lib/mysql
-  networks:
-   - inception
-  expose:
-   - "3306"
-  env_file:
-   - .env
+  nginx:
+    build: requirements/nginx/.
+    container_name: nginx
+    restart: on-failure
+    volumes:
+     - web:/var/www/html
+    depends_on:
+     - wordpress
+    networks:
+     - inception
+    ports:
+     - "443:443"
+  wordpress:
+    build: requirements/wordpress/.
+    container_name: wordpress
+    restart: on-failure
+    volumes:
+     - web:/var/www/html
+    depends_on:
+     - mariadb
+    networks:
+     - inception
+    expose:
+     - "9000"
+    env_file:
+     - .env
+  mariadb:
+    build: requirements/mariadb/.
+    container_name: mariadb
+    restart: on-failure
+    volumes:
+     - db:/var/lib/mysql
+    networks:
+     - inception
+    expose:
+     - "3306"
+    env_file:
+     - .env
+
 volumes:
   web:
-   driver: local
-   driver_opts:
-    type: none
-    o: bind
-    device: /home/mcygan/data/web
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mcygan/data/web
   db:
-   driver: local
-   driver_opts:
-    type: none
-    o: bind
-    device: /home/mcygan/data/db
-networks:
- inception:
-  driver: bridge
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mcygan/data/db
 
+networks:
+  inception:
+    driver: bridge
