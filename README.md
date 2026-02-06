@@ -15,6 +15,7 @@ Commands:
 - make stop ➡ pause containers
 - make start ➡ resume containers
 - make down ➡ stop containers & delete images
+- make status ➡ show running containers
 
 ## Resources
 
