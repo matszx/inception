@@ -69,5 +69,5 @@ Wordpress data is stored in
 MariaDB data is stored in
 >	/home/mcygan/data/db
 
-All data in those folders persists, even after all the containers have been deleted system rebooted  
+All data in those folders persists, even after all the containers have been deleted and system rebooted  
 It can also be deleted to restore default configuration
