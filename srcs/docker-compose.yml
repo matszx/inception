@@ -23,6 +23,8 @@ services:
    - inception
   expose:
    - "9000"
+  env_file:
+   - .env
  mariadb:
   build: requirements/mariadb/.
   container_name: mariadb
@@ -33,6 +35,8 @@ services:
    - inception
   expose:
    - "3306"
+  env_file:
+   - .env
 volumes:
   web:
    driver: local
