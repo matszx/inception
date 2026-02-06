@@ -1,8 +1,7 @@
 all: build
 
 dir:
-	mkdir -p home/mcygan/data/web
-	mkdir -p home/mcygan/data/db
+	@mkdir -p home/mcygan/data/web home/mcygan/data/db
 
 build: dir
 	docker compose -f ./srcs/docker-compose.yml up --build -d
