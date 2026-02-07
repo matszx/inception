@@ -41,10 +41,6 @@ If there is no srcs/.env you must create it with this template
 >	EMAIL=lambda@student.42belgium.be # modify  
 >	URL=lambda.42.fr # modify  
 >	  
->	CERT_PATH=/etc/nginx/ssl  
->	CERT_CRT=cert.crt  
->	CERT_KEY=cert.key  
->	  
 >	WP_ADMIN=XXX # modify  
 >	WP_ADMIN_PWD=XXX # modify  
 >	WP_USER=XXX # modify  
