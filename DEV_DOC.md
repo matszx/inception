@@ -71,3 +71,12 @@ MariaDB data is stored in
 
 All data in those folders persists, even after all the containers have been deleted and system rebooted  
 It can also be deleted to restore default configuration
+
+## Accessing other ports
+
+If you want to access the website through ports other than 443 you need to have this in wp-config.php
+>	define('WP_HOME', 'https://localhost:*<port>*');  
+>	define('WP_SITEURL', 'https://localhost:*<port>*');  
+>	$_SERVER['HTTPS'] = 'on'; # 'off' if you want to use http  
+>	$_SERVER['SERVER_PORT'] = *<port>*;  
+You will also have to adjust your docker-compose.yml and nginx.conf
